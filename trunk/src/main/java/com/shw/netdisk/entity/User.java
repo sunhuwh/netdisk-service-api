@@ -1,6 +1,11 @@
 package com.shw.netdisk.entity;
 
-public class User {
+/**
+ * 用户
+ * @author hu.sun
+ *
+ */
+public class User extends BasicEntity {
 	
 	private long id;
 	

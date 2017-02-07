@@ -1,12 +1,25 @@
 package com.shw.netdisk.entity;
 
-public class Resource {
+/**
+ * 资源
+ * @author hu.sun
+ *
+ */
+public class Resource extends BasicEntity{
 	
 	private long id;
 
 	private String name;
 	
+	private int typeId;
+	
 	private long userId;
+	
+	private String ext;
+	
+	private String description;
+	
+	private Long size;
 	
 	public long getId() {
 		return id;
@@ -30,6 +43,38 @@ public class Resource {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getTypeId() {
+		return typeId;
+	}
+
+	public void setTypeId(int typeId) {
+		this.typeId = typeId;
+	}
+
+	public String getExt() {
+		return ext;
+	}
+
+	public void setExt(String ext) {
+		this.ext = ext;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Long getSize() {
+		return size;
+	}
+
+	public void setSize(Long size) {
+		this.size = size;
 	}
 	
 }
