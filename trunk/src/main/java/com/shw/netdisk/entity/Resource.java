@@ -1,5 +1,7 @@
 package com.shw.netdisk.entity;
 
+import org.springframework.data.annotation.Id;
+
 /**
  * 资源
  * @author hu.sun
@@ -7,6 +9,7 @@ package com.shw.netdisk.entity;
  */
 public class Resource extends BasicEntity{
 	
+	@Id
 	private long id;
 
 	private String name;
