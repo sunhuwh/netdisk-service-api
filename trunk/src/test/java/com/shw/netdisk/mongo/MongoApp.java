@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 
 import com.mongodb.Mongo;
-import com.shw.netdisk.entity.Resource;
+import com.shw.netdisk.domain.Resource;
 
 public class MongoApp {
 

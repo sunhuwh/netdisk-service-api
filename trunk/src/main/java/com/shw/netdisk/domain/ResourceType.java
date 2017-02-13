@@ -1,4 +1,4 @@
-package com.shw.netdisk.entity;
+package com.shw.netdisk.domain;
 
 /**
  * 资源类型

@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.shw.netdisk.controller", "com.shw.netdisk.serviceImpl", "com.shw.netdisk.entity"})
+@ComponentScan(basePackages = {"com.shw.netdisk.application", "com.shw.netdisk.controller", "com.shw.netdisk.serviceImpl", "com.shw.netdisk.domain"})
 @EnableMongoRepositories(basePackages={"com.shw.netdisk.dao"})
 public class Application{
 	

@@ -1,4 +1,4 @@
-package com.shw.netdisk.entity;
+package com.shw.netdisk.domain;
 
 public class BasicEntity {
 
@@ -11,7 +11,7 @@ public class BasicEntity {
 	}
 
 	public void setCreateAt(long createAt) {
-		this.createAt = createAt;
+		this.createAt = System.currentTimeMillis();
 	}
 
 	public long getUpdateAt() {
