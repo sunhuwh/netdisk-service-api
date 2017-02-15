@@ -1,6 +1,6 @@
 package com.shw.netdisk.domain;
 
-import org.springframework.data.annotation.Id;
+import org.bson.types.ObjectId;
 
 /**
  * 资源
@@ -9,12 +9,14 @@ import org.springframework.data.annotation.Id;
  */
 public class Resource extends BasicEntity{
 	
-	@Id
-	private long id;
+	private ObjectId id;
 
 	private String name;
 	
-	private int typeId;
+	/**
+	 * 类型Id
+	 */
+	private String typeId;
 	
 	private long userId;
 	
@@ -24,11 +26,13 @@ public class Resource extends BasicEntity{
 	
 	private Long size;
 	
-	public long getId() {
+	private String url;
+	
+	public ObjectId getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(ObjectId id) {
 		this.id = id;
 	}
 
@@ -48,11 +52,11 @@ public class Resource extends BasicEntity{
 		this.name = name;
 	}
 
-	public int getTypeId() {
+	public String getTypeId() {
 		return typeId;
 	}
 
-	public void setTypeId(int typeId) {
+	public void setTypeId(String typeId) {
 		this.typeId = typeId;
 	}
 
@@ -78,6 +82,14 @@ public class Resource extends BasicEntity{
 
 	public void setSize(Long size) {
 		this.size = size;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 	
 }

@@ -7,17 +7,17 @@ package com.shw.netdisk.domain;
  */
 public class ResourceType extends BasicEntity{
 	
-	private int id;
+	private Object id;
 	
 	private String name;
 	
-	private int order;
-
-	public int getId() {
+	private Long order;
+	
+	public Object getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Object id) {
 		this.id = id;
 	}
 
@@ -29,11 +29,11 @@ public class ResourceType extends BasicEntity{
 		this.name = name;
 	}
 
-	public int getOrder() {
+	public Long getOrder() {
 		return order;
 	}
 
-	public void setOrder(int order) {
+	public void setOrder(Long order) {
 		this.order = order;
 	}
 	

@@ -12,6 +12,12 @@ public interface ResourceService {
 
 	Page<Resource> listWithPage(long offset, int limit);
 
+	List<Resource> findByType(String typeId, Integer offset, Integer limit);
+
+	Resource findById(String id);
+
 	Resource save(Resource resource);
+
+	void delete(String id);
 
 }

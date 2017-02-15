@@ -1,18 +1,16 @@
 package com.shw.netdisk.entity.result;
 
-import java.util.Map;
-
 import org.springframework.http.HttpStatus;
 
 public class ApiResult {
 	
-	public ApiResult(HttpStatus code, HttpMessage message, Map data) {
+	public ApiResult(HttpStatus code, HttpMessage message, Object data) {
 		this.code = code;
 		this.message = message;
 		this.data = data;
 	}
 	
-	public ApiResult(HttpStatus code, Map data) {
+	public ApiResult(HttpStatus code, Object data) {
 		this.code = code;
 		this.data = data;
 	}
@@ -21,13 +19,13 @@ public class ApiResult {
 	
 	private HttpMessage message;
 	
-	private Map data;
+	private Object data;
 	
-	public Map getData() {
+	public Object getData() {
 		return data;
 	}
 
-	public void setData(Map data) {
+	public void setData(Object data) {
 		this.data = data;
 	}
 
