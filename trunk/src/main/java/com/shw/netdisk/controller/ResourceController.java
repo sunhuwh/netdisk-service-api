@@ -54,15 +54,19 @@ public class ResourceController implements ControllerHelper{
 		switch (filter) {
 		case "type":
 			resources = resourceService.findByType(key, offset, limit);
+			break;
+		case "name":
+			resources = resourceService.findByName(key, offset, limit);
+			break;
 		default:
-			//resources = resourceService。;
+			break;
 		}
 		@SuppressWarnings("unchecked")
 		Map<String, Resource> data = map("status", HttpStatus.OK, "items", resources );
     	return new ApiResult(HttpStatus.OK, data);
     }
 	
-	@PostMapping(value = "/resource/save")
+	@PostMapping(value = "/resource")
 	public ApiResult save(String name, String description, String resourceTypeId, String url){
 		Resource entity = new Resource();
 		ObjectId id = new ObjectId();

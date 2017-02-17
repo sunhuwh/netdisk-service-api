@@ -20,4 +20,6 @@ public interface ResourceService {
 
 	void delete(String id);
 
+	List<Resource> findByName(String name, Integer offset, Integer limit);
+
 }

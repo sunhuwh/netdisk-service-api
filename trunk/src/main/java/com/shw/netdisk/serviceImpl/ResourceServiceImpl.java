@@ -31,8 +31,17 @@ public class ResourceServiceImpl extends BasicServiceImpl implements ResourceSer
 	
 	@Override
 	public List<Resource> findByType(String typeId, Integer offset, Integer limit) {
-		return resourceRepository.findByTypeId(typeId);
-	} 
+		long count = resourceRepository.countByTypeId(typeId);
+		Pageable pageable = super.createPageable(offset, limit, count);
+		return resourceRepository.findByTypeId(typeId, pageable);
+	}
+	
+	@Override
+	public List<Resource> findByName(String name, Integer offset, Integer limit) {
+		long count = resourceRepository.countByName(name);
+		Pageable pageable = super.createPageable(offset, limit, count);
+		return resourceRepository.findByNameLike(name, pageable);
+	}
 	
 	@Override
 	public Resource findById(String id) {
@@ -48,6 +57,5 @@ public class ResourceServiceImpl extends BasicServiceImpl implements ResourceSer
 	public void delete(String id){
 		resourceRepository.delete(id);
 	}
-
 	
 }
